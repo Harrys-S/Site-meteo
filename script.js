@@ -6,6 +6,9 @@ let calleSuccess = function(data) {
 	element.innerHTML = "La température est de: "+ data.main.temp + "°C";
 	element2.innerHTML = "Dominant: "+ data.weather[0].main;
 	element3.innerHTML = "Description: "+ data.weather[0].description;
+	let body = document.queryselestor("body");
+	let x = data.weather[0].main;
+	body.setAttribute("style", "background-image: url('" + x + ".jpg')");
 }
 
 function buttonClick() {
