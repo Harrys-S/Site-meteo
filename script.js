@@ -6,11 +6,6 @@ let calleSuccess = function(data) {
 	element.innerHTML = "La température est de: "+ data.main.temp + "°C";
 	element2.innerHTML = "Dominant: "+ data.weather[0].main;
 	element3.innerHTML = "Description: "+ data.weather[0].description;
-	let body = document.queryselestor("body");
-	let x = data.weather[0].main;
-	let y = "background-image: url('" + x + ".jpg')";
-	alert("Hello" + y);
-	body.setAttribute("style", y);
 }
 
 function buttonClick() {
@@ -21,4 +16,9 @@ function buttonClick() {
 	$.get(url, calleSuccess).fail(function() {
 		alert("error");
 	})
+	let body = document.queryselestor("body");
+	let x = data.weather[0].main;
+	let y = "background-image: url('" + x + ".jpg')";
+	alert("Hello" + y);
+	body.setAttribute("style", y);
 }
