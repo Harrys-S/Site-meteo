@@ -8,7 +8,9 @@ let calleSuccess = function(data) {
 	element3.innerHTML = "Description: "+ data.weather[0].description;
 	let body = document.queryselestor("body");
 	let x = data.weather[0].main;
-	body.setAttribute("style", "background-image: url('" + x + ".jpg')");
+	let y = "background-image: url('" + x + ".jpg')";
+	alert(y);
+	body.setAttribute("style", y);
 }
 
 function buttonClick() {
