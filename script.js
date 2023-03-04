@@ -16,9 +16,9 @@ function buttonClick() {
 	$.get(url, calleSuccess).fail(function() {
 		alert("error");
 	})
-	let body = document.queryselestor("body");
+	let body = document.queryselector("body");
 	let x = data.weather[0].main;
-	let y = "background-image: url('" + x + ".jpg')";
-	alert("Hello" + y);
+	let y = "background-image: url(\'" + x + ".jpg\')";
+	alert("Hello");
 	body.setAttribute("style", y);
 }
