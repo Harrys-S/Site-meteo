@@ -9,7 +9,7 @@ let calleSuccess = function(data) {
 	let body = document.queryselestor("body");
 	let x = data.weather[0].main;
 	let y = "background-image: url('" + x + ".jpg')";
-	alert(y);
+	alert("Hello" + y);
 	body.setAttribute("style", y);
 }
 
