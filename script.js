@@ -1,3 +1,9 @@
+let input = document.getElementById("city");
+input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && input.value != "")
+        buttonClick();
+});
+
 function buttonClick() {
 	let url = "https://api.openweathermap.org/data/2.5/weather?q=";
 	let key = "&lang=fr&units=metric&appid=3f0792fc888059276dc12063b484af4d";
@@ -16,5 +22,6 @@ function buttonClick() {
         })
         .catch(function (error) {
             console.error(error);
+            alert("Ville invalide");
         });
 }
