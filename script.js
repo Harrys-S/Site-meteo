@@ -1,7 +1,10 @@
 let input = document.getElementById("city");
 input.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && input.value != "")
+    if (event.key === "Enter" && input.value != ""){
         buttonClick();
+        input.focus();
+        input.select();
+    }
 });
 
 function buttonClick() {
